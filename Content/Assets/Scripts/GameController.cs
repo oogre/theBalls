@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     float playerDepth;
     Vector3 offset;
     public Vector3 force;
+    public float forceMultiplier = 1000;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,6 @@ public class GameController : MonoBehaviour
 
     void OnMouseUp() {
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
-        gameObject.GetComponent<Rigidbody>().AddForce(force * 1000);
+        gameObject.GetComponent<Rigidbody>().AddForce(force * forceMultiplier);
     }
 }
