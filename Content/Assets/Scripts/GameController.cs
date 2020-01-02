@@ -1,0 +1,48 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameController : MonoBehaviour
+{
+
+    float playerDepth;
+    Vector3 offset;
+    public Vector3 force;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //translate the cubes position from the world to Screen Point
+        playerDepth = Camera.main.WorldToScreenPoint(transform.position).z;
+
+        //calculate any difference between the cubes world position and the mouses Screen position converted to a world point  
+        offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, playerDepth));
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+        
+    }
+
+    void OnMouseDrag() {
+        //convert the screen mouse position to world point and adjust with offset
+        Vector3 curScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, playerDepth);
+
+        //convert the screen mouse position to world point and adjust with offset
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenSpace) + offset;
+
+        force = transform.position - curPosition;
+
+
+        //update the position of the object in the world
+        //transform.position = curPosition;
+    }
+
+    void OnMouseUp() {
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
+        gameObject.GetComponent<Rigidbody>().AddForce(force * 1000);
+    }
+}
