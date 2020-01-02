@@ -65,4 +65,5 @@ sysinfo.txt
 crashlytics-build.properties
 
 /Content/.vs/*
-/Content/Library/
+/Content/Library/*
+
