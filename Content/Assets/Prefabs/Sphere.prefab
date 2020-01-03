@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4572210600014827911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.19, y: 3.84, z: -0.55}
-  m_LocalScale: {x: 0.51438, y: 0.51438, z: 0.51438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,8 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragging: 0
   force: {x: 0, y: 0, z: 0}
-  forceMultiplier: 1000
-  forceArrowPrefab: {fileID: 859954822248144872, guid: a6df7447890e248398acafea8d621a20,
+  forceMultiplier: 300
+  forceArrowPrefab: {fileID: 859954822248144872, guid: 73f9a8fbfa01349e2836a7717568cb90,
     type: 3}
 --- !u!96 &7601032971953604854
 TrailRenderer:
@@ -145,7 +145,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 239b4bb2f082f004486dd88c3bbdae6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
