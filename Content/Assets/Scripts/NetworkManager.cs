@@ -142,7 +142,7 @@ public class NetworkManager : Singleton<NetworkManager>
 			}
 			else if (Request.requests[i].type == "impact")
 			{
-				Instantiate(impactParticlePrefab, startPoint, Quaternion.identity);
+				Instantiate(impactParticlePrefab, Request.requests[i].position, Quaternion.identity);
 			}
 		}
 		Request.requests.Clear();
