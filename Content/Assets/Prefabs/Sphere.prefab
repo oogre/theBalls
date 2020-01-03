@@ -125,7 +125,7 @@ MonoBehaviour:
   dragging: 0
   force: {x: 0, y: 0, z: 0}
   forceMultiplier: 300
-  forceArrowPrefab: {fileID: 859954822248144872, guid: 73f9a8fbfa01349e2836a7717568cb90,
+  forceArrowPrefab: {fileID: 859954822248144872, guid: a6df7447890e248398acafea8d621a20,
     type: 3}
 --- !u!96 &7601032971953604854
 TrailRenderer:

@@ -64,7 +64,6 @@ public class NetworkManager : MonoBehaviour
 		}
 		Player.players.Clear();
 
-
         if(position != me.transform.localPosition) { 
 			ws.Send(JsonUtility.ToJson(new Player(localName, me.transform.localPosition)));
             position = me.transform.localPosition;
