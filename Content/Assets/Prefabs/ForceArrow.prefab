@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5437539727279581965}
   - component: {fileID: 6652040055197741323}
   m_Layer: 0
-  m_Name: TryForceArrow
+  m_Name: ForceArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 10
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 239b4bb2f082f004486dd88c3bbdae6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,7 +121,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 2
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
