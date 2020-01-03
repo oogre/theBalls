@@ -80,6 +80,7 @@ ModelImporter:
     2300042: DiagonalDown011
     2300044: DiagonalDown012
     2300046: DiagonalDown013
+    2300048: //RootNode
     3300000: CubeDroit001
     3300002: CubeDroit002
     3300004: CubeDroit003
@@ -104,6 +105,7 @@ ModelImporter:
     3300042: DiagonalDown011
     3300044: DiagonalDown012
     3300046: DiagonalDown013
+    3300048: //RootNode
     4300000: diagonalUp
     4300002: DiagonalDown
     4300004: DiagonalDown001
@@ -128,6 +130,7 @@ ModelImporter:
     4300042: DiagonalDown012
     4300044: DiagonalDown013
     4300046: CubeDroit014
+    4300048: CubeDroit016
   externalObjects: {}
   materials:
     importMaterials: 1
