@@ -53,10 +53,10 @@ public class NetworkManager : MonoBehaviour
 				GameObject other = Instantiate(playerPrefab, startPoint, Quaternion.identity);
 				Destroy(other.GetComponent<Rigidbody>());
 				Destroy(other.GetComponent<GameController>());
+				Destroy(other.GetComponent<SphereCollider>());
 
 				players.Add(Player.players[i].name, other);
 			}
-			print(Player.players[i].position);
 			players[Player.players[i].name].transform.localPosition = Player.players[i].position;
 		}
 		Player.players.Clear();
