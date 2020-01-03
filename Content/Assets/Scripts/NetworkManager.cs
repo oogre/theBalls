@@ -24,15 +24,15 @@ public class Player
 public class NetworkManager : MonoBehaviour
 {
 	private WebSocket ws;
-
-	public GameObject playerPrefab;
 	private Vector3 startPoint;
-	public Dictionary<string, GameObject> players;
+	private Vector3 position;
+
 	public GameObject me;
-
-	public string serverAddress = "ws://OOGRE.fritz.box:1337";
 	public string localName;
-
+	public GameObject playerPrefab;
+	public Dictionary<string, GameObject> players;
+	public string serverAddress = "ws://OOGRE.fritz.box:1337";
+	
 	void Start()
     {
         startPoint = me.transform.localPosition;
@@ -44,7 +44,11 @@ public class NetworkManager : MonoBehaviour
 		ws.Connect();
 	}
 
-	// Update is called once per frame
+	private void Websocket_MessageReceived(object sender, MessageEventArgs e)
+	{
+		Player.players.Add(JsonUtility.FromJson<Player>(e.Data));
+	}
+
 	void Update()
     {
 		for (int i = 0;  i < Player.players.Count; i++) {
@@ -54,17 +58,16 @@ public class NetworkManager : MonoBehaviour
 				Destroy(other.GetComponent<Rigidbody>());
 				Destroy(other.GetComponent<GameController>());
 				Destroy(other.GetComponent<SphereCollider>());
-
 				players.Add(Player.players[i].name, other);
 			}
 			players[Player.players[i].name].transform.localPosition = Player.players[i].position;
 		}
 		Player.players.Clear();
-		ws.Send(JsonUtility.ToJson(new Player(localName, me.transform.localPosition)));
-	}
-	
-	private void Websocket_MessageReceived(object sender, MessageEventArgs e)
-	{
-		Player.players.Add(JsonUtility.FromJson<Player>(e.Data));
+
+
+        if(position != me.transform.localPosition) { 
+			ws.Send(JsonUtility.ToJson(new Player(localName, me.transform.localPosition)));
+            position = me.transform.localPosition;
+        }
 	}
 }
