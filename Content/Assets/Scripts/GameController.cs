@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class DragController : MonoBehaviour
 {
-    public bool dragging;
+    private bool dragging;
     public abstract void OnMouseDragStart();
     public abstract void OnMouseDragEnd();
     public abstract void OnMouseDragging();
@@ -55,16 +55,26 @@ public class GameController : ColliderController
 
 	private LineRenderer lineRenderer;
 	private Vector3 startPoint;
+	private  Vector3 force;
 
-	public Vector3 force;
 	public float forceMultiplier = 1000;
 	public GameObject forceArrowPrefab;
 	public GameObject impactParticlePrefab;
 	public GameObject quakyParticlePrefab;
 	public float quakyMagnitudeTreshold;
 	public float impactMagnitudeTreshold;
+
+	public string localName;
+	public GameObject playerPrefab;
+
+
 	void Start()
 	{
+		NetworkManager.Instance.me = gameObject;
+		NetworkManager.Instance.localName = localName;
+		NetworkManager.Instance.playerPrefab = playerPrefab;
+		NetworkManager.Instance.impactParticlePrefab = impactParticlePrefab;
+
 		playerDepth = Camera.main.WorldToScreenPoint(transform.localPosition).z;
 		rb = gameObject.GetComponent<Rigidbody>();
 		startPoint = transform.localPosition;
@@ -108,6 +118,7 @@ public class GameController : ColliderController
 		if (impactMagnitude > impactMagnitudeTreshold)
 		{
 			Instantiate(impactParticlePrefab, collisionPoint, Quaternion.identity);
+			NetworkManager.Instance.newImpact(collisionPoint);
 		}
 		if (impactMagnitude > quakyMagnitudeTreshold)
 		{
