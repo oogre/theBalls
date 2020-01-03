@@ -56,7 +56,7 @@ public class GameController : ColliderController
 	private LineRenderer lineRenderer;
 	private Vector3 startPoint;
 	private  Vector3 force;
-
+	
 	public float forceMultiplier = 1000;
 	public GameObject forceArrowPrefab;
 	public GameObject impactParticlePrefab;
@@ -66,9 +66,7 @@ public class GameController : ColliderController
 
 	public string localName;
 	public GameObject playerPrefab;
-
-	public List<Color> colors;
-	private MeshRenderer mr;
+	
 
 	void Start()
 	{
@@ -78,8 +76,7 @@ public class GameController : ColliderController
 		NetworkManager.Instance.impactParticlePrefab = impactParticlePrefab;
 		
 		playerDepth = Camera.main.WorldToScreenPoint(transform.localPosition).z;
-		mr = gameObject.GetComponent<MeshRenderer>();
-		
+
 		rb = gameObject.GetComponent<Rigidbody>();
 		startPoint = transform.localPosition;
 	}
@@ -89,6 +86,7 @@ public class GameController : ColliderController
 		rb.constraints = RigidbodyConstraints.FreezeAll;
 		forceArrow = Instantiate(forceArrowPrefab, transform.position, Quaternion.identity);
 		lineRenderer = forceArrow.GetComponent<LineRenderer>();
+		lineRenderer.materials[0].color = gameObject.GetComponent<MeshRenderer>().material.color;
 	}
 
 	public override void OnMouseDragEnd()
@@ -96,9 +94,6 @@ public class GameController : ColliderController
 		DestroyImmediate(forceArrow);
 		rb.constraints = RigidbodyConstraints.FreezePositionZ;
 		rb.AddForce(force * forceMultiplier);
-		int index = (int)Mathf.Floor(Random.value * colors.Count * 0.5f);
-		mr.sharedMaterial.color = colors[index*2];
-        GameObject.Find("lvl2").GetComponentInChildren<MeshRenderer>().sharedMaterial.color = colors[index * 2 + 1];
 	}
 
 	public override void OnMouseDragging()
