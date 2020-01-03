@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\CameraFollow2D.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\NetworkManager.cs" />
+    <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\websocket-sharp\AssemblyInfo.cs" />
     <Compile Include="Assets\Scripts\websocket-sharp\ByteOrder.cs" />
     <Compile Include="Assets\Scripts\websocket-sharp\CloseEventArgs.cs" />
