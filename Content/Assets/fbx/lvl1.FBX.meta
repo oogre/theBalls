@@ -51,6 +51,7 @@ ModelImporter:
     2300024: Cylinder002
     2300026: Cylinder003
     2300028: Shape1
+    2300030: //RootNode
     3300000: Object003
     3300002: Object004
     3300004: Object006
@@ -66,6 +67,7 @@ ModelImporter:
     3300024: Cylinder002
     3300026: Cylinder003
     3300028: Shape1
+    3300030: //RootNode
     4300000: Object003
     4300002: Object004
     4300004: Object006
