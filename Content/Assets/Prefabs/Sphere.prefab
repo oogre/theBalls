@@ -131,6 +131,8 @@ MonoBehaviour:
     type: 3}
   quakyParticlePrefab: {fileID: 3488943518549553249, guid: 4246dd5edae865148a446f0cfb65c841,
     type: 3}
+  quakyMagnitudeTreshold: 10
+  impactMagnitudeTreshold: 0
 --- !u!96 &7601032971953604854
 TrailRenderer:
   serializedVersion: 2
