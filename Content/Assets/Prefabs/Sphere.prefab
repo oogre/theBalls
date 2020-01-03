@@ -127,6 +127,10 @@ MonoBehaviour:
   forceMultiplier: 300
   forceArrowPrefab: {fileID: 859954822248144872, guid: a6df7447890e248398acafea8d621a20,
     type: 3}
+  impactParticlePrefab: {fileID: 3488943518549553249, guid: 4246dd5edae865148a446f0cfb65c841,
+    type: 3}
+  quakyParticlePrefab: {fileID: 3488943518549553249, guid: 4246dd5edae865148a446f0cfb65c841,
+    type: 3}
 --- !u!96 &7601032971953604854
 TrailRenderer:
   serializedVersion: 2
