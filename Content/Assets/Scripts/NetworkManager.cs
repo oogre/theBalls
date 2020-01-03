@@ -26,7 +26,7 @@ public class NetworkManager : MonoBehaviour
 	private WebSocket ws;
 
 	public GameObject playerPrefab;
-	public GameObject startPoint;
+	private Vector3 startPoint;
 	public Dictionary<string, GameObject> players;
 	public GameObject me;
 
@@ -35,6 +35,7 @@ public class NetworkManager : MonoBehaviour
 
 	void Start()
     {
+        startPoint = me.transform.localPosition;
 		players = new Dictionary<string, GameObject>();
 		ws = new WebSocket(serverAddress);
 		ws.OnOpen += (sender, e) => ws.Send(JsonUtility.ToJson(new Player(localName)));
@@ -49,7 +50,7 @@ public class NetworkManager : MonoBehaviour
 		for (int i = 0;  i < Player.players.Count; i++) {
 			if (!players.ContainsKey(Player.players[i].name))
 			{
-				GameObject other = Instantiate(playerPrefab, startPoint.transform.localPosition, Quaternion.identity);
+				GameObject other = Instantiate(playerPrefab, startPoint, Quaternion.identity);
 				Destroy(other.GetComponent<Rigidbody>());
 				Destroy(other.GetComponent<GameController>());
 
