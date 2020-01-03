@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cylinders
+  - wall
+  - saw
   layers:
   - Default
   - TransparentFX
