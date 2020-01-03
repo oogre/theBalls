@@ -26,9 +26,9 @@ public class ColorManager : MonoBehaviour
 			materialBalls.Add(m);
 		}
 
-		player.GetComponent<MeshRenderer>().material = materialBalls[0];
-		player.GetComponent<TrailRenderer>().materials[0].color = materialBalls[0].color;
-		wall.GetComponentInChildren<MeshRenderer>().sharedMaterial.color = colorWalls[0];
+		player.GetComponent<MeshRenderer>().material = materialBalls[1];
+		player.GetComponent<TrailRenderer>().materials[0].color = materialBalls[1].color;
+		wall.GetComponentInChildren<MeshRenderer>().sharedMaterial.color = colorWalls[1];
 	}
 
 	public void setColorTo(GameObject other) {

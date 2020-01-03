@@ -135,7 +135,6 @@ public class NetworkManager : Singleton<NetworkManager>
 				if (!players.ContainsKey(Request.requests[i].userName))
 				{
 					GameObject other = Instantiate(playerPrefab, startPoint, Quaternion.identity);
-
 					colorManager.setColorTo(other);
 					other.name = Request.requests[i].userName;
 					Destroy(other.GetComponent<Rigidbody>());
