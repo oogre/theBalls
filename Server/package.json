@@ -1,0 +1,13 @@
+{
+  "name": "server.theballs",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "server": "./server.sh"
+  },
+  "author": "Vincent Evrard (vincent@ogre.be)",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^7.1.2"
+  }
+}

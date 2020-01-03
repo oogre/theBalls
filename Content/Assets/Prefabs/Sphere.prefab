@@ -121,4 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8afb9cc3d5f420aa26234b1dc82b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   force: {x: 0, y: 0, z: 0}
+  forceMultiplier: 1000
+  forceArrowPrefab: {fileID: 859954822248144872, guid: 73f9a8fbfa01349e2836a7717568cb90,
+    type: 3}
