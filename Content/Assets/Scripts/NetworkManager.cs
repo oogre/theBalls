@@ -100,7 +100,7 @@ public class NetworkManager : Singleton<NetworkManager>
 	private WebSocket ws;
 	private Vector3 startPoint;
 	private Vector3 position;
-
+	private ColorManager colorManager;
 	public GameObject me;
 	public string localName;
 	public GameObject playerPrefab;
@@ -117,7 +117,10 @@ public class NetworkManager : Singleton<NetworkManager>
 		ws.OnMessage += Websocket_MessageReceived;
 		ws.OnError += (sender, e) => print(e.Message);
 		ws.Connect();
-	}
+
+
+		colorManager = Camera.main.GetComponent<ColorManager>();
+}
 
 	private void Websocket_MessageReceived(object sender, MessageEventArgs e)
 	{
@@ -132,6 +135,8 @@ public class NetworkManager : Singleton<NetworkManager>
 				if (!players.ContainsKey(Request.requests[i].userName))
 				{
 					GameObject other = Instantiate(playerPrefab, startPoint, Quaternion.identity);
+
+					colorManager.setColorTo(other);
 					other.name = Request.requests[i].userName;
 					Destroy(other.GetComponent<Rigidbody>());
 					Destroy(other.GetComponent<GameController>());
