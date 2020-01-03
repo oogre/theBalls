@@ -125,9 +125,11 @@ public class GameController : ColliderController
 		rb.constraints = RigidbodyConstraints.FreezeAll;
 		rb.constraints = RigidbodyConstraints.FreezePositionZ;
 	}
+
 	public override void OnLavaImpact(Collision collision)
 	{
 	}
+
 	public override void OnBonusImpact(Collision collision)
 	{
 	}
