@@ -409,6 +409,11 @@ PrefabInstance:
       propertyPath: forceMultiplier
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 5804116780499783020, guid: 4cd0c1ed34f71f54aba0f449248def3e,
+        type: 3}
+      propertyPath: quakyMagnitudeTreshold
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd0c1ed34f71f54aba0f449248def3e, type: 3}
 --- !u!1 &485675733 stripped
@@ -739,6 +744,22 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f056c8e206678dd40b91e0f81bea18a5, type: 3}
       propertyPath: m_Name
       value: lvl1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: f056c8e206678dd40b91e0f81bea18a5, type: 3}
+      propertyPath: m_TagString
+      value: saw
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: f056c8e206678dd40b91e0f81bea18a5, type: 3}
+      propertyPath: m_TagString
+      value: saw
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: f056c8e206678dd40b91e0f81bea18a5, type: 3}
+      propertyPath: m_TagString
+      value: saw
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: f056c8e206678dd40b91e0f81bea18a5, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f056c8e206678dd40b91e0f81bea18a5, type: 3}
       propertyPath: m_LocalPosition.x

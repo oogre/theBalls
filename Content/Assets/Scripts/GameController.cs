@@ -53,8 +53,6 @@ public class GameController : ColliderController
 	private float playerDepth;
 	private GameObject forceArrow;
 
-	private List<GameObject> impactParticles;
-	private GameObject quakyParticle;
 	private LineRenderer lineRenderer;
 	private Vector3 startPoint;
 
