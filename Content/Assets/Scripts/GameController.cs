@@ -30,7 +30,7 @@ public class GameController : Singleton<GameController>
 	void Start()
 	{
 		playerPrefab = Resources.Load<GameObject>("Prefabs/Sphere") as GameObject;
-		impactParticlePrefab = Resources.Load<GameObject>("Parcticles/Splash") as GameObject;
+		impactParticlePrefab = Resources.Load<GameObject>("Parcticles/Splash_Start (1)") as GameObject;
 	}
 
 	public void addImpactMarkerAt(Vector3 collisionPoint, bool networkTransfert=false)

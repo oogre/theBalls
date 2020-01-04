@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 239b4bb2f082f004486dd88c3bbdae6a, type: 2}
+  - {fileID: 2100000, guid: 01966fe218f634a97a0f96064fcae8a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -336,14 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1da0b8ae2bb4e599b2e7044453240d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceMultiplier: 1000
-  forceArrowPrefab: {fileID: 859954822248144872, guid: a6df7447890e248398acafea8d621a20,
-    type: 3}
-  impactParticlePrefab: {fileID: 3488943518549553249, guid: 4246dd5edae865148a446f0cfb65c841,
-    type: 3}
-  quakyParticlePrefab: {fileID: 3488943518549553249, guid: 4246dd5edae865148a446f0cfb65c841,
-    type: 3}
-  quakyMagnitudeTreshold: 10
-  impactMagnitudeTreshold: 0
   localName: ooogre
-  playerPrefab: {fileID: 4572210600014827911}
+  forceMultiplier: 1000
+  impactMagnitudeTreshold: 0
+  quakyMagnitudeTreshold: 10

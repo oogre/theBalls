@@ -45,18 +45,34 @@ public class PlayerController : ColliderController
 		rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
 	}
 
+
+
+
+
+
 	public override void OnMouseDragStart()
 	{
 		rigidbody.constraints = RigidbodyConstraints.FreezeAll;	
 	}
 
-	public override void OnMouseDragEnd()
+
+
+
+
+
+    public override void OnMouseDragEnd()
 	{
 		rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
 		rigidbody.AddForce(force * forceMultiplier);
 		lineRenderer.SetPosition(0, Vector3.zero);
 		lineRenderer.SetPosition(1, Vector3.zero);
 	}
+
+
+
+
+
+
 
 	public override void OnMouseDragging()
 	{
@@ -75,6 +91,9 @@ public class PlayerController : ColliderController
 		lineRenderer.SetPosition(1, curPosition);
 	}
 
+
+
+
 	public override void OnWallImpact(Collision collision)
 	{
 		float impactMagnitude = collision.relativeVelocity.magnitude;
@@ -89,6 +108,9 @@ public class PlayerController : ColliderController
 		}
 	}
 
+
+
+
 	public override void OnSawImpact(Collision collision)
 	{
 		foreach (Transform child in transform)
@@ -98,6 +120,18 @@ public class PlayerController : ColliderController
 		GameController.Instance.killThePlayer();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 public abstract class ColliderController : DragController
 {
