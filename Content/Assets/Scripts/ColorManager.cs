@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour
 {
-	public List<Color> colorBalls;
-	public List<Material> materialBalls;// = new Material(sourceMaterial);
-	public List<Color> colorWalls;
-	public List<Material> materialWalls;// = new Material(sourceMaterial);
+	public static List<Color> colorBalls;
+	public static List<Material> materialBalls;// = new Material(sourceMaterial);
+	public static List<Color> colorWalls;
+	public static List<Material> materialWalls;// = new Material(sourceMaterial);
 
 	private GameObject player;
 	private GameObject wall;
+
 	public void Start() {
 		player = GameObject.Find("Sphere");
 		wall = GameObject.Find("lvl2");
@@ -18,7 +19,6 @@ public class ColorManager : MonoBehaviour
 
         sourceMaterial = player.GetComponent<MeshRenderer>().material;
 		
-
 		foreach (var c in colorBalls)
 		{
 			Material m = new Material(sourceMaterial);
