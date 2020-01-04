@@ -1,89 +1,23 @@
 fileFormatVersion: 2
-guid: f056c8e206678dd40b91e0f81bea18a5
+guid: 57eb45e9bee28aa42a0ee62001c82b58
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Object003
-    100004: Object004
-    100006: Object006
-    100008: Object007
-    100010: Object008
-    100012: Object009
-    100014: Object010
-    100016: Object011
-    100018: Object012
-    100020: Object013
-    100022: Object014
-    100024: Cylinder001
-    100026: Cylinder002
-    100028: Cylinder003
-    100030: Shape1
-    400000: //RootNode
-    400002: Object003
-    400004: Object004
-    400006: Object006
-    400008: Object007
-    400010: Object008
-    400012: Object009
-    400014: Object010
-    400016: Object011
-    400018: Object012
-    400020: Object013
-    400022: Object014
-    400024: Cylinder001
-    400026: Cylinder002
-    400028: Cylinder003
-    400030: Shape1
+    100000: CubeDroit015
+    100002: CubeDroit066
+    100004: //RootNode
+    400000: CubeDroit015
+    400002: CubeDroit066
+    400004: //RootNode
     2100000: No Name
-    2300000: Object003
-    2300002: Object004
-    2300004: Object006
-    2300006: Object007
-    2300008: Object008
-    2300010: Object009
-    2300012: Object010
-    2300014: Object011
-    2300016: Object012
-    2300018: Object013
-    2300020: Object014
-    2300022: Cylinder001
-    2300024: Cylinder002
-    2300026: Cylinder003
-    2300028: Shape1
-    2300030: //RootNode
-    3300000: Object003
-    3300002: Object004
-    3300004: Object006
-    3300006: Object007
-    3300008: Object008
-    3300010: Object009
-    3300012: Object010
-    3300014: Object011
-    3300016: Object012
-    3300018: Object013
-    3300020: Object014
-    3300022: Cylinder001
-    3300024: Cylinder002
-    3300026: Cylinder003
-    3300028: Shape1
-    3300030: //RootNode
-    4300000: Object003
-    4300002: Object004
-    4300004: Object006
-    4300006: Object007
-    4300008: Object008
-    4300010: Object009
-    4300012: Object010
-    4300014: Object011
-    4300016: Object012
-    4300018: Object013
-    4300020: Object014
-    4300022: Shape1
-    4300024: Cylinder001
-    4300026: Cylinder002
-    4300028: Cylinder003
-    4300030: diagonalUp087
+    2300000: CubeDroit015
+    2300002: CubeDroit066
+    3300000: CubeDroit015
+    3300002: CubeDroit066
+    4300000: CubeDroit015
+    4300002: CubeDroit066
+    7400000: Take 001
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -136,8 +70,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -164,7 +98,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

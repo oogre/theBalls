@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: 4d3c64422baf25746b28f0043f02f2ff
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: CubeDroit069
+    100002: CubeDroit133
+    100004: CubeDroit134
+    100006: diagonalUp026
+    100008: diagonalUp027
+    100010: diagonalUp028
+    100012: diagonalUp029
+    100014: diagonalUp030
+    100016: diagonalUp031
+    100018: diagonalUp075
+    100020: diagonalUp158
+    100022: diagonalUp159
+    100024: diagonalUp160
+    100026: diagonalUp161
+    100028: diagonalUp162
+    100030: diagonalUp163
+    100032: diagonalUp164
+    100034: diagonalUp165
+    100036: diagonalUp166
+    100038: diagonalUp167
+    100040: //RootNode
+    400000: CubeDroit069
+    400002: CubeDroit133
+    400004: CubeDroit134
+    400006: diagonalUp026
+    400008: diagonalUp027
+    400010: diagonalUp028
+    400012: diagonalUp029
+    400014: diagonalUp030
+    400016: diagonalUp031
+    400018: diagonalUp075
+    400020: diagonalUp158
+    400022: diagonalUp159
+    400024: diagonalUp160
+    400026: diagonalUp161
+    400028: diagonalUp162
+    400030: diagonalUp163
+    400032: diagonalUp164
+    400034: diagonalUp165
+    400036: diagonalUp166
+    400038: diagonalUp167
+    400040: //RootNode
+    2100000: No Name
+    2300000: CubeDroit069
+    2300002: CubeDroit133
+    2300004: CubeDroit134
+    2300006: diagonalUp026
+    2300008: diagonalUp027
+    2300010: diagonalUp028
+    2300012: diagonalUp029
+    2300014: diagonalUp030
+    2300016: diagonalUp031
+    2300018: diagonalUp075
+    2300020: diagonalUp158
+    2300022: diagonalUp159
+    2300024: diagonalUp160
+    2300026: diagonalUp161
+    2300028: diagonalUp162
+    2300030: diagonalUp163
+    2300032: diagonalUp164
+    2300034: diagonalUp165
+    2300036: diagonalUp166
+    2300038: diagonalUp167
+    3300000: CubeDroit069
+    3300002: CubeDroit133
+    3300004: CubeDroit134
+    3300006: diagonalUp026
+    3300008: diagonalUp027
+    3300010: diagonalUp028
+    3300012: diagonalUp029
+    3300014: diagonalUp030
+    3300016: diagonalUp031
+    3300018: diagonalUp075
+    3300020: diagonalUp158
+    3300022: diagonalUp159
+    3300024: diagonalUp160
+    3300026: diagonalUp161
+    3300028: diagonalUp162
+    3300030: diagonalUp163
+    3300032: diagonalUp164
+    3300034: diagonalUp165
+    3300036: diagonalUp166
+    3300038: diagonalUp167
+    4300000: CubeDroit069
+    4300002: diagonalUp026
+    4300004: diagonalUp027
+    4300006: diagonalUp028
+    4300008: diagonalUp029
+    4300010: diagonalUp030
+    4300012: diagonalUp031
+    4300014: diagonalUp075
+    4300016: diagonalUp158
+    4300018: diagonalUp159
+    4300020: diagonalUp160
+    4300022: diagonalUp161
+    4300024: diagonalUp162
+    4300026: diagonalUp163
+    4300028: diagonalUp164
+    4300030: diagonalUp165
+    4300032: diagonalUp166
+    4300034: diagonalUp167
+    4300036: CubeDroit133
+    4300038: CubeDroit134
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

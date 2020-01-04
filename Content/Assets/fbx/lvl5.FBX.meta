@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 3a062bf26918b724091ad62afc57e7ae
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: CubeDroit116
+    100002: CubeDroit117
+    100004: CubeDroit118
+    100006: CubeDroit119
+    100008: CubeDroit120
+    100010: CubeDroit121
+    100012: CubeDroit122
+    100014: CubeDroit123
+    100016: CubeDroit124
+    100018: CubeDroit125
+    100020: CubeDroit126
+    100022: CubeDroit127
+    100024: CubeDroit128
+    100026: CubeDroit129
+    100028: CubeDroit130
+    100030: CubeDroit131
+    100032: CubeDroit132
+    100034: //RootNode
+    400000: CubeDroit116
+    400002: CubeDroit117
+    400004: CubeDroit118
+    400006: CubeDroit119
+    400008: CubeDroit120
+    400010: CubeDroit121
+    400012: CubeDroit122
+    400014: CubeDroit123
+    400016: CubeDroit124
+    400018: CubeDroit125
+    400020: CubeDroit126
+    400022: CubeDroit127
+    400024: CubeDroit128
+    400026: CubeDroit129
+    400028: CubeDroit130
+    400030: CubeDroit131
+    400032: CubeDroit132
+    400034: //RootNode
+    2100000: No Name
+    2300000: CubeDroit116
+    2300002: CubeDroit117
+    2300004: CubeDroit118
+    2300006: CubeDroit119
+    2300008: CubeDroit120
+    2300010: CubeDroit121
+    2300012: CubeDroit122
+    2300014: CubeDroit123
+    2300016: CubeDroit124
+    2300018: CubeDroit125
+    2300020: CubeDroit126
+    2300022: CubeDroit127
+    2300024: CubeDroit128
+    2300026: CubeDroit129
+    2300028: CubeDroit130
+    2300030: CubeDroit131
+    2300032: CubeDroit132
+    3300000: CubeDroit116
+    3300002: CubeDroit117
+    3300004: CubeDroit118
+    3300006: CubeDroit119
+    3300008: CubeDroit120
+    3300010: CubeDroit121
+    3300012: CubeDroit122
+    3300014: CubeDroit123
+    3300016: CubeDroit124
+    3300018: CubeDroit125
+    3300020: CubeDroit126
+    3300022: CubeDroit127
+    3300024: CubeDroit128
+    3300026: CubeDroit129
+    3300028: CubeDroit130
+    3300030: CubeDroit131
+    3300032: CubeDroit132
+    4300000: CubeDroit116
+    4300002: CubeDroit117
+    4300004: CubeDroit118
+    4300006: CubeDroit119
+    4300008: CubeDroit120
+    4300010: CubeDroit121
+    4300012: CubeDroit122
+    4300014: CubeDroit123
+    4300016: CubeDroit124
+    4300018: CubeDroit125
+    4300020: CubeDroit126
+    4300022: CubeDroit127
+    4300024: CubeDroit128
+    4300026: CubeDroit129
+    4300028: CubeDroit130
+    4300030: CubeDroit131
+    4300032: CubeDroit132
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

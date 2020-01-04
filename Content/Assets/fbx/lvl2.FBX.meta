@@ -29,6 +29,10 @@ ModelImporter:
     100046: DiagonalDown011
     100048: DiagonalDown012
     100050: DiagonalDown013
+    100052: CubeDroit090
+    100054: CubeDroit091
+    100056: CubeDroit092
+    100058: diagonalUp077
     400000: CubeDroit001
     400002: CubeDroit002
     400004: CubeDroit003
@@ -55,6 +59,10 @@ ModelImporter:
     400046: DiagonalDown011
     400048: DiagonalDown012
     400050: DiagonalDown013
+    400052: CubeDroit090
+    400054: CubeDroit091
+    400056: CubeDroit092
+    400058: diagonalUp077
     2100000: No Name
     2300000: CubeDroit001
     2300002: CubeDroit002
@@ -81,6 +89,10 @@ ModelImporter:
     2300044: DiagonalDown012
     2300046: DiagonalDown013
     2300048: //RootNode
+    2300050: CubeDroit090
+    2300052: CubeDroit091
+    2300054: CubeDroit092
+    2300056: diagonalUp077
     3300000: CubeDroit001
     3300002: CubeDroit002
     3300004: CubeDroit003
@@ -106,6 +118,10 @@ ModelImporter:
     3300044: DiagonalDown012
     3300046: DiagonalDown013
     3300048: //RootNode
+    3300050: CubeDroit090
+    3300052: CubeDroit091
+    3300054: CubeDroit092
+    3300056: diagonalUp077
     4300000: diagonalUp
     4300002: DiagonalDown
     4300004: DiagonalDown001
@@ -131,6 +147,10 @@ ModelImporter:
     4300044: DiagonalDown013
     4300046: CubeDroit014
     4300048: CubeDroit016
+    4300050: diagonalUp077
+    4300052: CubeDroit090
+    4300054: CubeDroit091
+    4300056: CubeDroit092
   externalObjects: {}
   materials:
     importMaterials: 1

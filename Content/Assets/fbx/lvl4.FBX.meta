@@ -6,16 +6,66 @@ ModelImporter:
     100000: Box001
     100002: Box002
     100004: //RootNode
+    100006: CubeDroit098
+    100008: CubeDroit099
+    100010: CubeDroit100
+    100012: CubeDroit102
+    100014: diagonalUp081
+    100016: diagonalUp082
+    100018: diagonalUp083
+    100020: diagonalUp084
+    100022: diagonalUp085
+    100024: diagonalUp086
     400000: Box001
     400002: Box002
     400004: //RootNode
+    400006: CubeDroit098
+    400008: CubeDroit099
+    400010: CubeDroit100
+    400012: CubeDroit102
+    400014: diagonalUp081
+    400016: diagonalUp082
+    400018: diagonalUp083
+    400020: diagonalUp084
+    400022: diagonalUp085
+    400024: diagonalUp086
     2100000: No Name
     2300000: Box001
     2300002: Box002
+    2300004: CubeDroit098
+    2300006: CubeDroit099
+    2300008: CubeDroit100
+    2300010: CubeDroit102
+    2300012: diagonalUp081
+    2300014: diagonalUp082
+    2300016: diagonalUp083
+    2300018: diagonalUp084
+    2300020: diagonalUp085
+    2300022: diagonalUp086
     3300000: Box001
     3300002: Box002
+    3300004: CubeDroit098
+    3300006: CubeDroit099
+    3300008: CubeDroit100
+    3300010: CubeDroit102
+    3300012: diagonalUp081
+    3300014: diagonalUp082
+    3300016: diagonalUp083
+    3300018: diagonalUp084
+    3300020: diagonalUp085
+    3300022: diagonalUp086
     4300000: Box001
     4300002: Box002
+    4300004: CubeDroit098
+    4300006: CubeDroit099
+    4300008: CubeDroit100
+    4300010: CubeDroit102
+    4300012: diagonalUp081
+    4300014: diagonalUp082
+    4300016: diagonalUp083
+    4300018: diagonalUp084
+    4300020: diagonalUp085
+    4300022: diagonalUp086
   externalObjects: {}
   materials:
     importMaterials: 1
