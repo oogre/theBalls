@@ -8,10 +8,13 @@ public class NetworkManager : Singleton<NetworkManager>
 {
 	private WebSocket ws;
 	public string serverAddress = "ws://OOGRE.local:1337";
-	
+
+	public bool disabled = true;
+
 	public void Init()
     {
-		ws = new WebSocket(serverAddress);
+		if (disabled) return;
+			ws = new WebSocket(serverAddress);
 		ws.OnOpen += (sender, e) => ws.Send(JsonUtility.ToJson(new Request("player", GameController.Instance.playerName)));
 		ws.OnMessage += (sender, e) => Request.requests.Add(JsonUtility.FromJson<Request>(e.Data));
 		ws.OnError += (sender, e) => print(e.Message);
@@ -20,6 +23,7 @@ public class NetworkManager : Singleton<NetworkManager>
 
 	void Update()
     {
+		if (disabled) return;
 		for (int i = 0;  i < Request.requests.Count; i++) {
 			switch(Request.requests[i].type){
 				case "player": {
@@ -40,10 +44,12 @@ public class NetworkManager : Singleton<NetworkManager>
 	}
 
 	public void newImpact(Vector3 position) {
+		if (disabled) return;
 		ws.Send(JsonUtility.ToJson(new Request("impact", GameController.Instance.playerName, position)));
 	}
 
 	public void playerMoved(Vector3 position) {
+		if (disabled) return;
 		ws.Send(JsonUtility.ToJson(new Request("player", GameController.Instance.playerName, position)));
 	}
 
