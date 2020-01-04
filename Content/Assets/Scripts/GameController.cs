@@ -2,148 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class DragController : MonoBehaviour
+public class GameController : Singleton<GameController>
 {
-    private bool dragging;
-    public abstract void OnMouseDragStart();
-    public abstract void OnMouseDragEnd();
-    public abstract void OnMouseDragging();
+	private GameObject playerPrefab;
+	private GameObject impactParticlePrefab;
+	private Vector3 lastPlayerPosition;
+	private Dictionary<string, GameObject> players;
+	private string _playerName;
+	private Vector3 _startPoint;
+	private GameObject _player;
 
-    void OnMouseDrag()
-    {
-        if (!dragging) {
-            OnMouseDragStart();
-        }
-        OnMouseDragging();
-        dragging = true;
-    }
+    public string playerName {
+		get { return _playerName; }
+		set { _playerName = value; }
+	}
 
-    void OnMouseUp()
-    {
-        if (dragging)
-        {
-            OnMouseDragEnd();
-        }
-        dragging = false;
-    }
-}
-
-public abstract class ColliderController : DragController
-{
-
-	public abstract void OnWallImpact(Collision collision);
-	public abstract void OnSawImpact(Collision collision);
-	public abstract void OnLavaImpact(Collision collision);
-	public abstract void OnBonusImpact(Collision collision);
-
-	public void OnCollisionEnter(Collision collision)
-    {
-		switch (collision.gameObject.tag) {
-			case "wall": OnWallImpact(collision); break;
-			case "speed":break;
-			case "lava": break;
-			case "saw": OnSawImpact(collision); break;
+    public GameObject player {
+		get { return _player; }
+		set {
+			_player = value;
+			_startPoint = _player.transform.localPosition;
+			Camera.main.GetComponent<CameraFollow2D>().target = _player;
+			NetworkManager.Instance.Init();
 		}
 	}
-}
-
-public class GameController : ColliderController
-{
-	private Rigidbody rb;
-	private float playerDepth;
-	private GameObject forceArrow;
-
-	private LineRenderer lineRenderer;
-	private Vector3 startPoint;
-	private  Vector3 force;
 	
-	public float forceMultiplier = 1000;
-	public GameObject forceArrowPrefab;
-	public GameObject impactParticlePrefab;
-	public GameObject quakyParticlePrefab;
-	public float quakyMagnitudeTreshold;
-	public float impactMagnitudeTreshold;
-
-	public string localName;
-	public GameObject playerPrefab;
-	
-
 	void Start()
 	{
-		NetworkManager.Instance.me = gameObject;
-		NetworkManager.Instance.localName = localName;
-		NetworkManager.Instance.playerPrefab = playerPrefab;
-		NetworkManager.Instance.impactParticlePrefab = impactParticlePrefab;
-		
-		playerDepth = Camera.main.WorldToScreenPoint(transform.localPosition).z;
-
-		rb = gameObject.GetComponent<Rigidbody>();
-		startPoint = transform.localPosition;
+		playerPrefab = Resources.Load<GameObject>("Prefabs/Sphere") as GameObject;
+		impactParticlePrefab = Resources.Load<GameObject>("Parcticles/Splash") as GameObject;
 	}
 
-	public override void OnMouseDragStart()
+	public void addImpactMarkerAt(Vector3 collisionPoint, bool networkTransfert=false)
 	{
-		rb.constraints = RigidbodyConstraints.FreezeAll;
-		forceArrow = Instantiate(forceArrowPrefab, transform.position, Quaternion.identity);
-		lineRenderer = forceArrow.GetComponent<LineRenderer>();
-		lineRenderer.materials[0].color = gameObject.GetComponent<MeshRenderer>().material.color;
+		if(networkTransfert) NetworkManager.Instance.newImpact(collisionPoint);
+		Instantiate(impactParticlePrefab, collisionPoint, Quaternion.identity);
 	}
 
-	public override void OnMouseDragEnd()
+	public void killThePlayer()
 	{
-		DestroyImmediate(forceArrow);
-		rb.constraints = RigidbodyConstraints.FreezePositionZ;
-		rb.AddForce(force * forceMultiplier);
+		_player.GetComponent<PlayerController>().GoTo(_startPoint);
 	}
 
-	public override void OnMouseDragging()
+	public void playerMoved(Vector3 playerPos)
 	{
-		Vector3 curScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, playerDepth);
-		//convert the screen mouse position to world point and adjust with offset
-		Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenSpace);
-		curPosition.z = transform.localPosition.z;
-
-		force = transform.localPosition - curPosition;
-
-		float curve = Mathf.Min(Mathf.Max(force.magnitude / 3.0f, 0.0f), 1.0f);
-		curve = Mathf.Pow(curve, 2f);
-		lineRenderer.endWidth = Mathf.Lerp(1.0f, 0.0f, curve);
-		lineRenderer.SetPosition(0, transform.localPosition);
-		lineRenderer.SetPosition(1, curPosition);
-	}
-
-	public override void OnWallImpact(Collision collision)
-	{
-		float impactMagnitude = collision.relativeVelocity.magnitude;
-		Vector3 collisionPoint = collision.contacts[0].point;
-
-		if (impactMagnitude > impactMagnitudeTreshold)
+        if(lastPlayerPosition != playerPos)
 		{
-			Instantiate(impactParticlePrefab, collisionPoint, Quaternion.identity);
-			NetworkManager.Instance.newImpact(collisionPoint);
-		}
-		if (impactMagnitude > quakyMagnitudeTreshold)
-		{
-			Instantiate(quakyParticlePrefab, transform);
+			NetworkManager.Instance.playerMoved(playerPos);
+			lastPlayerPosition = playerPos;
 		}
 	}
 
-	public override void OnSawImpact(Collision collision)
+	public void addOtherPlayer(Request r)
 	{
-		transform.localPosition = startPoint;
-		foreach (Transform child in transform)
-		{
-			GameObject.Destroy(child.gameObject);
-		}
-		rb.constraints = RigidbodyConstraints.FreezeAll;
-		rb.constraints = RigidbodyConstraints.FreezePositionZ;
+		GameObject other = Instantiate(playerPrefab, _startPoint, Quaternion.identity);
+		other.name = r.userName;
+		other.GetComponent<PlayerController>().convertToNonPlayer();
+		players.Add(other.name, other);
 	}
 
-	public override void OnLavaImpact(Collision collision)
-	{
+	public void moveOtherPlayer(Request r) {
+		players[r.userName].transform.localPosition = r.position;
 	}
 
-	public override void OnBonusImpact(Collision collision)
+	public bool isOtherPlayerExists(string name)
 	{
+		return players.ContainsKey(name);
 	}
 }
